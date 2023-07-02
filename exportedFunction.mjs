@@ -3,4 +3,4 @@ function getUser(message){
 }
 
 
-module.exports = getUser;
+export default getUser;

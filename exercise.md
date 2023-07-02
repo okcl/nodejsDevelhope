@@ -1,3 +1,4 @@
-Explore with the Node.js REPL
+Create and use ECMAScript modules
 
-Use the Node.js REPL to list the methods provided by the Node.js core crypto module. Use one of these methods to generate a random ID.
+Create a script that uses export default to export a function.
+Create another script that uses import to import the function and then calls it.
