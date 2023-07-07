@@ -1,5 +1,3 @@
-Change the HTML response
+Command-line art
 
-Our HTTP server sends an HTML response body.
-
-Replace the text in the HTML with your own message. Run the server and use your web browser to test your changes.
+Create a new Node.js project and install the figlet package (https://www.npmjs.com/package/figlet). Write a script that uses the function from this package to output some text based art (the figlet package README has a 'Quick Start' section). Run the script with Node.js.
