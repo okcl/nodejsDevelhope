@@ -14,14 +14,17 @@ function luckyDraw(player) {
     });
 }
 
-const players = ["Joe", "Caroline", "Sabrina"];
+async function getResults() {
+  const players = ["Tina", "Jorge", "Julien"];
 
-players.forEach((player) => {
-  luckyDraw(player)
-    .then((result) => {
+  for (const player of players) {
+    try {
+      const result = await luckyDraw(player);
       console.log(result);
-    })
-    .catch((error) => {
+    } catch (error) {
       console.error(error);
-    });
-});
+    }
+  }
+}
+
+getResults();
