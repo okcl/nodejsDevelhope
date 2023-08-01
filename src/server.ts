@@ -17,7 +17,6 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 
-
 app.get('/api/planets', getAll);
 
 app.get('/api/planets/:id', getOneById);
