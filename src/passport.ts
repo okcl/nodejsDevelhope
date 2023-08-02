@@ -2,7 +2,7 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 import passport from "passport";
 import passportJWT from "passport-jwt";
-import { db } from './db';
+import { db } from './db.js';
 
 const { SECRET } = process.env;
 
@@ -11,7 +11,8 @@ passport.use(
         {
             secretOrKey: SECRET,
             jwtFromRequest: passportJWT.ExtractJwt.fromAuthHeaderAsBearerToken(),
-        }, async (payload, done) => {
+        }, 
+        async (payload, done) => {
             const user = db.one(`SELECT * FROM user WHERE id=$1`, payload.id)
             console.log(user);
 
@@ -22,4 +23,4 @@ passport.use(
             }
         }
     )
-)
+);
